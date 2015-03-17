@@ -522,7 +522,7 @@
 				<tr valign='top'>
 				<th scope='row'>Hosted Domain: <small>(Optional)</small></th>
 				<td>
-					<input type='text' name='wpoa_google_api_hd' value='<?php echo esc_html( get_option('wpoa_google_api_hd') ); ?>' />
+					<input type='text' name='wpoa_google_api_hd' value='<?php echo esc_html( get_option( 'wpoa_google_api_hd' ) ); ?>' />
 				</td>
 				</tr>
 
