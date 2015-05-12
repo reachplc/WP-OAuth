@@ -26,6 +26,7 @@ Class WPOA {
 
 	const PLUGIN_VERSION = "0.4.1";
   // singleton class pattern:
+
 	protected static $instance = NULL;
 	public static function get_instance() {
 		NULL === self::$instance and self::$instance = new self;
