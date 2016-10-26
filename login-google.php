@@ -15,7 +15,7 @@ define( 'CLIENT_HD', get_option('wpoa_google_api_hd') ); // PROVIDER SPECIFIC: l
 define('REDIRECT_URI', rtrim(site_url(), '/') . '/');
 define( 'SCOPE', 'openid email profile' ); // PROVIDER SPECIFIC: 'profile' is the minimum scope required to get the user's id from Google
 define('URL_AUTH', "https://accounts.google.com/o/oauth2/auth?");
-define('URL_TOKEN', "https://accounts.google.com/o/oauth2/token?");
+define('URL_TOKEN', "https://accounts.google.com/o/oauth2/token");
 define('URL_USER', "https://www.googleapis.com/plus/v1/people/me?");
 # END OF DEFINE THE OAUTH PROVIDER AND SETTINGS TO USE #
 
@@ -102,7 +102,7 @@ function get_oauth_token($wpoa) {
 	$url_params = http_build_query($params);
 	switch (strtolower(HTTP_UTIL)) {
 		case 'curl':
-			$url = URL_TOKEN . $url_params;
+			$url = URL_TOKEN;
 			$curl = curl_init();
 			curl_setopt($curl, CURLOPT_URL, $url);
 			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
